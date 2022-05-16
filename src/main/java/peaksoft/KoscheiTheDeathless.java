@@ -7,7 +7,12 @@ import peaksoft.model.Ocean1;
 @Component
 public class KoscheiTheDeathless {
 
+    @Autowired
     private Ocean1 ocean;
+
+    public KoscheiTheDeathless(Ocean1 ocean) {
+        this.ocean = ocean;
+    }
 
     public String getRulesByDeth() {
         return "На свете есть океан , " + ocean.toString();
